@@ -26,7 +26,7 @@ html {
     --fs-xl: 18px;
     --fs-2xl: 20px;
     --fs-3xl: 26px;
-    --fs-6xl: 40px;
+    --fs-6xl: 36px;
     /* COLORS */
     --clr-white: #fff;
     --clr-black: #000000;
@@ -113,6 +113,129 @@ html {
     background-color: var(--clr-btn-primary);
 }
 
+/* OTHER-CSS */
+nav {
+    background-image: url(/assets/img/png/nav-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-image: url(/assets/img/png/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.index_10 {
+    z-index: 10;
+}
+
+.br_primary {
+    border-color: var(--clr-btn-primary) !important;
+}
+
+.border_1 {
+    border: 1px solid var(--clr-btn-primary);
+    border-radius: 4px;
+}
+
+.btn_shadow {
+    box-shadow: var(--btn-shadow);
+}
+
+.m_end {
+    right: 12%;
+}
+
+.m3_end {
+    right: 35%;
+}
+
+.w_40 {
+    width: 42%;
+}
+
+.index_3 {
+    z-index: 3;
+}
+
+.index_2 {
+    z-index: 2;
+}
+
+.h_1080 {
+    height: 1080px;
+}
+
+.b_line::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: var(--clr-primary);
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+}
+
+/* HOVER */
+.btn_hover {
+    transition: all linear 300ms;
+}
+
+.btn_hover:hover {
+    background-color: var(--clr-black);
+    color: var(--clr-btn-primary);
+    border: 1px solid var(--clr-btn-primary);
+}
+
+.scale_hover {
+    transition: all linear 300ms;
+}
+
+.scale_hover:hover {
+    transform: scale(1.4);
+}
+
+.h_700px {
+    height: 700px;
+}
+
+/* ANIMATION */
+.monkey {
+    animation: monkey 6s ease-in-out infinite;
+}
+
+/* 
+@keyframes monkey {
+    0% {
+        transform: translateY(-2%);
+    }
+
+    50% {
+        transform: translateY(2%);
+    }
+
+    100% {
+        transform: translateY(10%);
+    }
+} */
+@keyframes monkey {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
 @media (min-width:576px) {
     :root {
         /* FONT-SIZE */
@@ -133,6 +256,14 @@ html {
         --fs-3xl: 32px;
         --fs-6xl: 52px;
     }
+
+    .h_md_800 {
+        height: 800px;
+    }
+
+    .translate_x {
+        transform: translateX(95%);
+    }
 }
 
 @media (min-width:992px) {
@@ -143,5 +274,19 @@ html {
         --fs-2xl: 24px;
         --fs-3xl: 36px;
         --fs-6xl: 64px;
+    }
+
+    .h_lg_935 {
+        height: 950px;
+    }
+
+    .mw_xl_550 {
+        max-width: 550px;
+    }
+}
+
+@media (min-width:1400px) {
+    .min_vh_xxl_100 {
+        min-height: 100vh;
     }
 }
