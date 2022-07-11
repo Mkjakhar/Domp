@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+    list-style: none !important;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'Azo Sans Uber';
+    src: url(/assets/fonts/Azo\ Sans\ Uber\ W01\ Regular.otf);
+}
+
+:root {
+    /* FONT-SIZE */
+    --fs-small: 16px;
+    --fs-xl: 18px;
+    --fs-2xl: 20px;
+    --fs-3xl: 26px;
+    --fs-6xl: 40px;
+    /* COLORS */
+    --clr-white: #fff;
+    --clr-black: #000000;
+    /* yellow */
+    --clr-primary: #f1c85d;
+    --clr-btn-primary: #fdda60;
+    --btn-shadow: 0px 4px 24px rgba(253, 218, 96, 0.8);
+    /* FONT-WEIGHT */
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 900;
+}
+
+.ff_montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ff_azo {
+    font-family: 'Azo Sans Uber';
+}
+
+/* FONT-SIZE */
+.fs_small {
+    font-size: var(--fs-small);
+}
+
+.fs_xl {
+    font-size: var(--fs-xl);
+}
+
+.fs_2xl {
+    font-size: var(--fs-2xl);
+}
+
+.fs_3xl {
+    font-size: var(--fs-3xl);
+}
+
+.fs_6xl {
+    font-size: var(--fs-6xl);
+}
+
+/* COLORS */
+.text_white {
+    color: var(--clr-white);
+}
+
+.text_black {
+    color: var(--clr-black);
+}
+
+.text_primary {
+    color: var(--clr-primary);
+}
+
+/* font-weight */
+.fw_regular {
+    font-weight: var(--fw-regular);
+}
+
+.fw_semibold {
+    font-weight: var(--fw-semibold);
+}
+
+.fw_bold {
+    font-weight: var(--fw-bold);
+}
+
+.fw_extrabold {
+    font-weight: var(--fw-extrabold);
+}
+
+/* BACKGROUND-COLORS */
+.bg_black {
+    background-color: var(--clr-black);
+}
+
+.bg_white {
+    background-color: var(--clr-white);
+}
+
+.bg_btnprimary {
+    background-color: var(--clr-btn-primary);
+}
+
+@media (min-width:576px) {
+    :root {
+        /* FONT-SIZE */
+        --fs-small: 16px;
+        --fs-xl: 20px;
+        --fs-2xl: 22px;
+        --fs-3xl: 28px;
+        --fs-6xl: 48px;
+    }
+}
+
+@media (min-width:768px) {
+    :root {
+        /* FONT-SIZE */
+        --fs-small: 16px;
+        --fs-xl: 20px;
+        --fs-2xl: 24px;
+        --fs-3xl: 32px;
+        --fs-6xl: 52px;
+    }
+}
+
+@media (min-width:992px) {
+    :root {
+        /* FONT-SIZE */
+        --fs-small: 16px;
+        --fs-xl: 20px;
+        --fs-2xl: 24px;
+        --fs-3xl: 36px;
+        --fs-6xl: 64px;
+    }
+}
