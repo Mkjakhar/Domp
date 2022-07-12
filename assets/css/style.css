@@ -26,7 +26,7 @@ html {
     --fs-xl: 18px;
     --fs-2xl: 20px;
     --fs-3xl: 26px;
-    --fs-6xl: 40px;
+    --fs-6xl: 36px;
     /* COLORS */
     --clr-white: #fff;
     --clr-black: #000000;
@@ -113,6 +113,243 @@ html {
     background-color: var(--clr-btn-primary);
 }
 
+/* OTHER-CSS */
+nav {
+    background-image: url(/assets/img/png/nav-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-image: url(/assets/img/png/header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.index_10 {
+    z-index: 10;
+}
+
+.br_primary {
+    border-color: var(--clr-btn-primary) !important;
+}
+
+.border_1 {
+    border: 1px solid var(--clr-btn-primary);
+    border-radius: 4px;
+}
+
+.btn_shadow {
+    box-shadow: var(--btn-shadow);
+}
+
+.m_end {
+    right: 12%;
+}
+
+.m3_end {
+    right: 35%;
+}
+
+.w_40 {
+    width: 42%;
+}
+
+.index_3 {
+    z-index: 3;
+}
+
+.index_2 {
+    z-index: 2;
+}
+
+.h_1080 {
+    height: 1080px;
+}
+
+.b_line::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: var(--clr-primary);
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+}
+
+/* HOVER */
+.btn_hover {
+    transition: all linear 300ms;
+}
+
+.btn_hover:hover {
+    background-color: var(--clr-black);
+    color: var(--clr-btn-primary);
+    border: 1px solid var(--clr-btn-primary);
+}
+
+.scale_hover {
+    transition: all linear 300ms;
+}
+
+.scale_hover:hover {
+    transform: scale(1.4);
+}
+
+.h_700px {
+    height: 700px;
+}
+
+.start_10 {
+    left: -10%;
+}
+
+.slider_bg {
+    top: -15%;
+    left: -15%;
+}
+
+.r_line {
+    top: 4%;
+    left: -13%;
+    width: 93%;
+}
+
+.r_circle {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    transition: all linear 200ms;
+}
+
+.p_f_100 {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    transition: all linear 200ms;
+}
+
+/* 
+.r_circle:hover {
+    background-color: var(--clr-btn-primary);
+    box-shadow: var(--btn-shadow);
+} */
+
+div:hover>.r_circle {
+    background-color: var(--clr-btn-primary);
+    box-shadow: var(--btn-shadow);
+}
+
+.w_60 {
+    width: 75%;
+}
+
+.translate_y {
+    transform: translateY(29%);
+}
+
+/* SLIDER */
+
+#slideshow {
+    margin: 4% auto;
+    width: 210px;
+    height: 400px;
+    position: relative;
+    perspective: 1000px;
+    transform: rotate3d(1, 1, 1, 20deg);
+}
+
+#carousel {
+    width: 100%;
+    animation: rotation 20s infinite linear;
+    position: absolute;
+    top: 25%;
+    transform-style: preserve-3d;
+    padding-left: 50px;
+}
+
+#carousel:hover {
+    animation-play-state: paused;
+}
+
+#carousel figure {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: transparent !important;
+}
+
+#carousel figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(288px);
+}
+
+#carousel figure:nth-child(2) {
+    transform: rotateY(40deg) translateZ(288px);
+}
+
+#carousel figure:nth-child(3) {
+    transform: rotateY(80deg) translateZ(288px);
+}
+
+#carousel figure:nth-child(4) {
+    transform: rotateY(120deg) translateZ(288px);
+}
+
+#carousel figure:nth-child(5) {
+    transform: rotateY(160deg) translateZ(288px);
+}
+
+#carousel figure:nth-child(6) {
+    transform: rotateY(200deg) translateZ(288px);
+}
+
+#carousel figure:nth-child(7) {
+    transform: rotateY(240deg) translateZ(288px);
+}
+
+#carousel figure:nth-child(8) {
+    transform: rotateY(280deg) translateZ(288px);
+}
+
+#carousel figure:nth-child(9) {
+    transform: rotateY(320deg) translateZ(288px);
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* ANIMATION */
+.monkey {
+    animation: monkey 6s 1s ease-in-out infinite;
+}
+
+@keyframes monkey {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
 @media (min-width:576px) {
     :root {
         /* FONT-SIZE */
@@ -133,6 +370,14 @@ html {
         --fs-3xl: 32px;
         --fs-6xl: 52px;
     }
+
+    .h_md_800 {
+        height: 800px;
+    }
+
+    .translate_x {
+        transform: translateX(95%);
+    }
 }
 
 @media (min-width:992px) {
@@ -143,5 +388,107 @@ html {
         --fs-2xl: 24px;
         --fs-3xl: 36px;
         --fs-6xl: 64px;
+    }
+
+    .slider_bg {
+        top: 0;
+        left: -10%;
+    }
+
+    .h_lg_935 {
+        height: 950px;
+    }
+
+    .mw_xl_550 {
+        max-width: 550px;
+    }
+
+    #slideshow {
+        margin: 4% auto;
+        width: 210px;
+        height: 500px;
+        position: relative;
+        perspective: 1000px;
+        transform: rotate3d(1, 1, 1, 20deg);
+    }
+
+    #carousel {
+        width: 100%;
+        animation: rotation 20s infinite linear;
+        position: absolute;
+        top: 40%;
+        transform-style: preserve-3d;
+        padding-left: 50px;
+    }
+}
+
+@media (min-width:1200px) {
+    .translate_x_17 {
+        transform: translateX(-30%);
+    }
+
+    .translate_x_7 {
+        transform: translateX(-20%);
+    }
+
+    .translate_x_10 {
+        transform: translateX(-10%);
+    }
+
+    .translate_line1 {
+        transform: translate(-56%, 43px);
+    }
+
+    .translate_line2 {
+        transform: translate(-4%, 25px);
+    }
+
+    .translate_line3 {
+        transform: translate(32%, 0);
+    }
+
+    .translate_line4 {
+        transform: translate(0, -22px);
+    }
+
+    .translate_line5 {
+        transform: translate(-57%, -48px);
+    }
+
+}
+
+@media (min-width:1400px) {
+    .min_vh_xxl_100 {
+        min-height: 100vh;
+    }
+
+    .w_60 {
+        width: 58%;
+    }
+
+    .r_line {
+        top: 0;
+        left: -6%;
+        width: 78%;
+    }
+
+    .translate_line1 {
+        transform: translate(-35%, 25px);
+    }
+
+    .translate_line2 {
+        transform: translate(33%, 14px);
+    }
+
+    .translate_line3 {
+        transform: translate(61%, 0);
+    }
+
+    .translate_line4 {
+        transform: translate(33%, -20px);
+    }
+
+    .translate_line5 {
+        transform: translate(-30%, -36px);
     }
 }
