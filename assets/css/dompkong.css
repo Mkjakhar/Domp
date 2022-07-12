@@ -1,0 +1,22 @@
+@import url(/assets/css/style.css);
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.box_card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(31px);
+    border-radius: 16px;
+    height: 100%;
+}
+
+.box_card_yellow {
+    background: #FDDA60;
+    box-shadow: 0px 14px 56px rgba(253, 218, 96, 0.5);
+    border-radius: 16px;
+    border: 1px solid #FFFFFF;
+    height: 100%;
+}
