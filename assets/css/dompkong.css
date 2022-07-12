@@ -20,3 +20,29 @@ body {
     border: 1px solid #FFFFFF;
     height: 100%;
 }
+
+.bg_mint_nft {
+    background: url(../img/png/bg-mint-nft.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+@media (max-width:576px) {
+    .w-60 {
+        width: 45%;
+    }
+}
+
+.px_30 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.btn_style {
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+}
