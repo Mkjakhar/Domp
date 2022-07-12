@@ -265,13 +265,6 @@ img {
     border-radius: 10px;
 }
 
-
-/* 
-.r_circle:hover {
-    background-color: var(--clr-btn-primary);
-    box-shadow: var(--btn-shadow);
-} */
-
 div:hover>.r_circle {
     background-color: var(--clr-btn-primary);
     box-shadow: var(--btn-shadow);
