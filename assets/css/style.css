@@ -725,6 +725,10 @@ div:hover>.r_circle {
         width: 58%;
     }
 
+    .pe_xxl_4 {
+        padding-right: 34px !important;
+    }
+
     .w_xxl_100 {
         width: 100% !important;
     }
