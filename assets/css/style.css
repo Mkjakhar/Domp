@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+@import url(./dompkong.css);
 
 * {
     margin: 0;
@@ -13,6 +14,7 @@ body,
 html {
     overflow-x: hidden;
     height: 100%;
+    background-color: var(--clr-black);
 }
 
 @font-face {
@@ -24,9 +26,10 @@ html {
     /* FONT-SIZE */
     --fs-small: 16px;
     --fs-xl: 18px;
-    --fs-2xl: 20px;
-    --fs-3xl: 26px;
-    --fs-6xl: 36px;
+    --fs-lg: 20px;
+    --fs-2xl: 22px;
+    --fs-3xl: 24px;
+    --fs-6xl: 34px;
     /* COLORS */
     --clr-white: #fff;
     --clr-black: #000000;
@@ -52,6 +55,10 @@ html {
 /* FONT-SIZE */
 .fs_small {
     font-size: var(--fs-small);
+}
+
+.fs_lg {
+    font-size: var(--fs-lg);
 }
 
 .fs_xl {
@@ -146,11 +153,11 @@ header {
 }
 
 .m_end {
-    right: 12%;
+    right: 11%;
 }
 
 .m3_end {
-    right: 35%;
+    right: 32%;
 }
 
 .w_40 {
@@ -193,7 +200,104 @@ header {
     border-radius: 30px;
 }
 
+.index-1 {
+    z-index: -1;
+}
+
+input {
+    outline: none;
+}
+
 /* HOVER */
+.box_card {
+    transition: all linear 300ms;
+}
+
+.footer_img {
+    animation: shake infinite 9s;
+}
+
+@keyframes shake {
+    0% {
+        -webkit-transform: translate(2px, 1px) rotate(0deg);
+    }
+
+    10% {
+        -webkit-transform: translate(-1px, -2px) rotate(-2deg);
+    }
+
+    20% {
+        -webkit-transform: translate(-3px, 0px) rotate(3deg);
+    }
+
+    30% {
+        -webkit-transform: translate(0px, 2px) rotate(0deg);
+    }
+
+    40% {
+        -webkit-transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        -webkit-transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        -webkit-transform: translate(2px, 1px) rotate(-2deg);
+    }
+
+    80% {
+        -webkit-transform: translate(-1px, -1px) rotate(4deg);
+    }
+
+    90% {
+        -webkit-transform: translate(2px, 2px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.box_card:hover {
+    background-color: var(--clr-primary);
+    box-shadow: 0px 14px 56px rgba(253, 218, 96, 0.5);
+    transform: scale(0.95) rotate(4deg);
+}
+
+.box_card:hover img {
+    opacity: 0;
+}
+
+.box_card:hover p {
+    color: var(--clr-black);
+}
+
+.box_card:hover .fill path {
+    fill: var(--clr-black);
+}
+
+svg path {
+    transition: all linear 300ms;
+}
+
+.box_card:hover svg path {
+    stroke: var(--clr-black);
+}
+
+p,
+h4 {
+    transition: all linear 300ms;
+}
+
+.box_card:hover h4 {
+    color: var(--clr-black);
+}
+
 .btn_hover {
     transition: all linear 300ms;
 }
@@ -213,24 +317,60 @@ img {
 }
 
 .scale_hover {
-    transition: all linear 300ms;
+    transition: all linear 300ms !important;
 }
 
 .scale_hover:hover {
-    transform: scale(1.4);
+    transform: scale(1.4) !important;
+}
+
+.p_2 {
+    padding: 2px;
 }
 
 .h_700px {
     height: 700px;
 }
 
+.w_33 {
+    width: 33%;
+}
+
+.w_27 {
+    width: 27%;
+}
+
 .start_10 {
     left: -10%;
 }
 
+.start_25 {
+    left: 25%;
+}
+
+.acc_bg {
+    top: 17%;
+    left: 32%;
+}
+
 .slider_bg {
-    top: -15%;
-    left: -15%;
+    top: -50%;
+    left: -50%;
+}
+
+footer {
+    background-image: url(/assets/img/png/footer-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#FAQ {
+    background-image: url(/assets/img/png/accordian-back.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(50px);
 }
 
 .r_line {
@@ -245,6 +385,10 @@ img {
     padding-top: 27px;
     padding-bottom: 27px;
     transition: all linear 200ms;
+}
+
+.k_shadow {
+    box-shadow: 1px 1px 8px 2px rgb(253 218 96 / 80%);
 }
 
 .p_f_100 {
@@ -276,6 +420,35 @@ div:hover>.r_circle {
 
 .translate_y {
     transform: translateY(29%);
+}
+
+/* ACCORDIAN */
+.accordion-button:not(.collapsed)::after {
+    background-image: url(/assets/img/png/minus.png);
+}
+
+.accordion-button::after {
+    background-image: url(/assets/img/png/plus.png);
+}
+
+.accordion-item {
+    position: relative;
+}
+
+.accordion-item:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--clr-primary);
+    box-shadow: 1px 1px 9px 1px rgba(253, 218, 96, 0.8);
+}
+
+.w_85 {
+    width: 85%;
 }
 
 /* SLIDER */
@@ -375,10 +548,41 @@ div:hover>.r_circle {
     }
 }
 
+.btn_hover {
+    overflow: hidden;
+    position: relative;
+    z-index: 6;
+}
+
+.btn_hover::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 150%;
+    top: -10%;
+    filter: blur(7px);
+    left: 0;
+    z-index: -1;
+    transform: rotate(20deg);
+    background-color: var(--clr-white);
+    animation: btnmove 2s infinite linear;
+}
+
+@keyframes btnmove {
+    0% {
+        transform: translateX(-20px) rotate(20deg);
+    }
+
+    100% {
+        transform: translateX(500px)rotate(20deg);
+    }
+}
+
 @media (min-width:576px) {
     :root {
         /* FONT-SIZE */
         --fs-small: 16px;
+        --fs-lg: 18px;
         --fs-xl: 20px;
         --fs-2xl: 22px;
         --fs-3xl: 28px;
@@ -394,6 +598,7 @@ div:hover>.r_circle {
     :root {
         /* FONT-SIZE */
         --fs-small: 16px;
+        --fs-lg: 22px;
         --fs-xl: 20px;
         --fs-2xl: 24px;
         --fs-3xl: 32px;
@@ -413,10 +618,35 @@ div:hover>.r_circle {
     :root {
         /* FONT-SIZE */
         --fs-small: 16px;
+        --fs-lg: 22px;
         --fs-xl: 20px;
         --fs-2xl: 24px;
         --fs-3xl: 36px;
         --fs-6xl: 64px;
+    }
+
+    .translate_x100 {
+        transform: translateX(100%);
+    }
+
+    .translate_x50 {
+        transform: translateX(50%);
+    }
+
+    .translate_x-100 {
+        transform: translateX(-100%);
+    }
+
+    .translate_x-50 {
+        transform: translateX(-50%);
+    }
+
+    .translate_x15 {
+        transform: translateX(15%);
+    }
+
+    .translate_x-15 {
+        transform: translateX(-15%);
     }
 
     .slider_bg {
@@ -493,6 +723,10 @@ div:hover>.r_circle {
 
     .w_75 {
         width: 58%;
+    }
+
+    .w_xxl_100 {
+        width: 100% !important;
     }
 
     .r_line {
