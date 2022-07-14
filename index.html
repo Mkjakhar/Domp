@@ -19,6 +19,8 @@
     <!-- CUSTOM-CSS-FILE -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>DOMPKONG</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -35,11 +37,11 @@
                         <a class="d-inline-block translate_x" href="#"><img class="w-100"
                                 src="./assets/img/png/pagelogo.png" alt="pagelogo"></a>
                     </div>
-                    <a class=" fs_small fw_regular ff_azo text_black bg_btnprimary py-md-3 py-2 px-md-4 px-3 d-inline-block btn_hover
+                    <a class="fs_small fw_regular ff_azo text_black bg_btnprimary py-md-3 py-2 px-md-4 px-3 d-inline-block btn_hover
                             border_1 btn_shadow" href="#">cONNECT wALLET</a>
                 </div>
                 <div class="d-flex align-items-center justify-content-center pt-4 pb-3">
-                    <div class="" data-aos="fade-down-right" data-aos-delay="300">
+                    <div data-aos="fade-down-right" data-aos-delay="300">
                         <a class="p_2" href="#"><img class="scale_hover w-100" src="./assets/img/png/nav-twiter.png"
                                 alt="nav-twiter"></a>
                     </div>
@@ -107,7 +109,7 @@
             <div class="container text-center text-xl-start">
                 <div class="row align-items-center">
                     <div class="col-xl-6 mt-4 mt-xl-0 pe-xl-5">
-                        <h2 class="fs_6xl fw_regular ff_azo text_white">ABOUT</h2>
+                        <h2 class="fs_6xl fw_regular ff_azo text_white" animate__animated animate__fadeInLeft>ABOUT</h2>
                         <p class="fs_small fw_regular ff_montserrat text_white"> Turpis et tortor vel pharetra nibh.
                             Mauris nisl sit vitae viverra amet et. Erat nam molestie. Vitae mollis lacus senectus mattis
                             nisl. Porta , adipiscing sed mus diam amet, ac sed tellus.
@@ -303,11 +305,12 @@
                                 <p class="fs_small ff_montserrat fw_regular">Transaction per wallet</p>
                             </div>
                             <div class="col-12 py-sm-3">
-                                <button class="py-2 px_30 btn_style fs_3xl ff_montserrat fw_extrabold value-button"
+                                <button
+                                    class="py-2 px_30 btn_style fs_3xl bg-white ff_montserrat fw_extrabold value-button"
                                     onclick="decreaseValue()" value="Decrease Value">-</button>
                                 <input id="number" class="fs_3xl count ff_montserrat fw_extrabold py-2 px-5 bg-transparent text-white
                             btn_style mx-sm-2 w-60 text-center" type="text" value="03">
-                                <button class="py-2 px-4 btn_style fs_3xl ff_montserrat fw_extrabold
+                                <button class="py-2 px-4 btn_style bg-white fs_3xl ff_montserrat fw_extrabold
                                     value-button" onclick="increaseValue()" value="Increase Value">+</button>
                             </div>
                             <div class="col-xxl-11 mt-4 mt-sm-0 pe_xxl_4 pe-xl-5">
